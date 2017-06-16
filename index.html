@@ -1,0 +1,7 @@
+{% if error %}
+Something went wrong. Try later
+{% elif step1 %}
+<a href='https://slack.com/oauth/authorize?client_id={{client_id}}&scope={{scope}}&redirect_uri={{redirect_uri}}'><img src='https://api.slack.com/img/sign_in_with_slack.png' /></a>
+{% elif step2 %}
+{{access_token}}
+{% endif %}
